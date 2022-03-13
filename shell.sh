@@ -11,18 +11,11 @@ read_N() {
    done
 }
 
-#is_text()
-#	isFile=$(file -0 "$2" | cut -d $'\0' -f2)#  tarber dzeverov porceci chexav
-#   case "$isFile" in
-#      (*text*)
-#         echo "$2 is a text file"
-#         ;;
-#      (*)
-#         echo "$2 is not a text file, please use a different file"
-#         ;;
-#   esac
-
-
-#}
+is_text(){
+	file=$1
+	if [ "${file: -4}" == ".txt" ]; then
+	    wc -w  $file
+	fi
+}
 read_N
-#is_text
+is_text $2
