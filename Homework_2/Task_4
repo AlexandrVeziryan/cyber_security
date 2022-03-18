@@ -1,0 +1,13 @@
+ sudo adduser some
+ sudo touch /home/some/text.txt
+ 3 ֊ ls - l,        chmod 644 text.txt
+ 4 - su - some,    chmod 664 text.txt,         su - alex
+ 5 - sudo usermod -a -G alex some
+ 6 - sudo chown alex /home/some/text.txt,   sudo deluser alex some,   sudo userdel some
+ checking - ls - l /home/some/text.txt`
+ rw-r--r-- 1 alex some 0 Մար 18 14:16 text.txt
+
+
+ 
+ 
+ 
